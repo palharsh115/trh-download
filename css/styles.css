@@ -188,15 +188,23 @@ footer {
     padding: 15px 20px;
   }
 
-  .header-left,
-  .header-right {
+  .header-left {
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: flex-start; /* Left-align */
+    align-items: center;
     margin-bottom: 10px;
   }
 
   .header-left .company-logo {
-    max-width: 120px;
+    max-width: 100px; /* Smaller on mobile */
+    height: auto;
+  }
+
+  .header-right {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
   }
 
   .header-center {
@@ -208,7 +216,6 @@ footer {
 
   .header-center h1 {
     font-size: 3rem;
-    text-align: center;
   }
 
   .download-button {
@@ -216,6 +223,8 @@ footer {
     padding: 10px 16px;
   }
 
+  /* Add other mobile styles here if needed */
+}
   .info-cards {
     flex-direction: column;
     padding: 20px;
@@ -225,22 +234,30 @@ footer {
     width: 100%;
     padding: 20px;
   }
-
-  .gallery-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  
+ .gallery-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+    padding-bottom: 10px;
   }
 
   .gallery-container img {
-    max-width: 90%;
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    scroll-snap-align: start;
   }
+
 
   footer {
     font-size: 14px;
     padding: 15px;
   }
-}
+
 
 
 @media (max-width: 480px) {
