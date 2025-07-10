@@ -204,7 +204,7 @@ footer {
   .header-right {
     width: 100%;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 88px;
   }
 
   .header-center {
@@ -234,21 +234,23 @@ footer {
     width: 100%;
     padding: 20px;
   }
-  
- .gallery-container {
+
+    .gallery-container {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
     gap: 10px;
     padding-bottom: 10px;
   }
 
   .gallery-container img {
     flex: 0 0 auto;
-    width: 80%;
-    max-width: 300px;
-    border-radius: 10px;
+    width: 70%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 12px;
     scroll-snap-align: start;
   }
 
